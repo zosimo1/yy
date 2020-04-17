@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的日志</title>
+    <link type="text/css" rel="stylesheet" href="./css/grbk.css" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/grbk_rz.css" />
+</head>
+
+<body>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content ">
+                <div class="abb1"> </div>
+                <form action="/login/enter" method="post" class="abb">
+                    <div class="app"><img src="./images/logo.png" width="50px"> <span style="font-size: 14px;">
+                            <i style="font-size: 20px; padding: 10px;">·</i>用户名密码登录</span></div>
+                    <div class="form-group">
+                        <input id="tt" name="tt" type="hidden">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名"
+                            name="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码"
+                            name="password">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                    </div>
+                    <div>
+                        <a href="/forget" style="font-size: 14px;">忘记密码?</a>
+                        <a href="/reg" style="font-size: 14px; float: right;">立刻注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="bj">
+            <div class="bj_top"> </div>
+            <div class="bj_top1">
+                <div class="bk_nr">
+                    <div class="bt">
+                        <h1>个人博客模板古典系列之——江南墨卷</h1>
+                        <% if(user){ %>
+                        <div class="an">
+                            <a href="#"><img class="an_img" src="./textimages/<%= user.img %>"></a>
+                            <a style="line-height: 32px; width: 50px;" href="#"><%= user.name %></a>
+                            <a class="an1" href="/reb">登出</a>
+                        </div>
+                        <% } else{ %>
+                        <a onclick="htmles()" class="an" data-toggle="modal" data-target=".bs-example-modal-sm">登录</a>
+                        <a class="an" href="/reg">注册</a>
+                        <% } %>
+                    </div>
+                    <div class="bt1">
+                        <ul>
+                            <li><a href="/">网站首页</a></li>
+                            <% if(user){ %>
+                            <li><a href="/myComment">我的评论</a></li>
+                            <li><a href="/comment">我的博文</a></li>
+                            <% } %>
+                            <li><a href="/text">发博文</a></li>
+                            <li><a href="">技术文章</a></li>
+                            <li><a href="">给我留言</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bj_top2">
+                <div class="zy_top">
+                    <div class="bk_nr_center">
+                        <div class="center_xhx">
+                            <div class="center_left">我的博文</div>
+                            <div class="center_right">您现在的位置是：<a href="/">网站首页</a>>>我的博文</div>
+                        </div>
+                        <div class="nr_left">
+                            <div id="apo" class="zuob" data=<% if(user){ %> 1 <% } else{ %> 0 <% } %>>
+                                <% for(var i=bq.length-1;i>=0 ;i--){ %>
+                                <div>
+                                    <a href="/comment/del/<%= bq[i]._id %>" class="glyphicon glyphicon-plus"  style="float: right;" ></a>
+                                    <p><a onclick='commentes("<%= bq[i]._id %>")'
+                                            class="nr_left_h"><%= bq[i].title %></a></p>
+                                </div>
+                                <div class="nr_left_db">
+                                    <div class="nr_left_images"><img src="./textimages/<%= bq[i].img %>"></div>
+                                    <div class="nr_left_yd"> <%= bq[i].times %> </div>
+                                    <div class="a">
+                                        <div><i><%= bq[i].text %></i></div>
+                                    </div>
+                                </div>
+                                <% } %>
+                            </div>
+                            <div id="adp" class='nr_left_comment'>
+                            </div>
+                        </div>
+                        <div class="riji_right">
+                            <div><img src="./images/02.jpg" width="185" height="147"> </div>
+                            <div><img src="./images/01.jpg" width="185" height="147"> </div>
+                            <div><img src="./images/03.jpg" width="244" height="147"> </div>
+                            <div><img src="./images/04.jpg" width="185" height="147"> </div>
+                            <div><img src="./images/02.jpg" width="185" height="147"> </div>
+                            <div><img src="./images/06.jpg" width="185" height="147"> </div>
+                        </div>
+                    </div>
+                    <div class="fenye">
+                        <ul>
+                            <li>页次:1/1</li>
+                            <li>每页25</li>
+                            <li>总数10</li>
+                            <li>首页</li>
+                            <li>上一页</li>
+                            <li>下一页</li>
+                            <li>尾页</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bj_bottom">
+            <div class="bj_bottom1">All Rights Reserved 版权说有:<a href="">杨青个人博客</a>
+                备案号:蜀ICP背00000000号</div>
+            <div class="bj_bottom2">Design by dance Smile</div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/add.js"></script>
+
+</html>

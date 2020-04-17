@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/grbk.css" />
+</head>
+
+<body>
+   <!-- 登录界面 -->
+   <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content ">
+            <div class="abb1"> </div>
+            <form action="/login/enter" method="post" class="abb">
+                <div class="app"><img src="./images/logo.png" width="50px"> <span style="font-size: 14px;">
+                        <i style="font-size: 20px; padding: 10px;">·</i>用户名密码登录</span></div>
+                <div class="form-group">
+                    <input id="tt" name="tt" type="hidden">
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名"
+                        name="name">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码"
+                        name="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">登录</button>
+                </div>
+                <div>
+                    <a href="/forget" style="font-size: 14px;">忘记密码?</a>
+                    <a href="/reg" style="font-size: 14px; float: right;">立刻注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div>
+    <div class="bj">
+        <div class="bj_top"> </div>
+        <div class="bj_top1">
+            <div class="bk_nr">
+                <div class="bt">
+                    <h1>古典系列个人博客——江南墨卷</h1>
+                    <a onclick="htmles()" class="an" data-toggle="modal" data-target=".bs-example-modal-sm">登录</a>
+                    <a class="an" href="/reg">注册</a>
+                </div>
+                <div class="bt1">
+                    <ul>
+                        <li><a href="/">网站首页</a></li>
+                        <li><a href="/text">发博文</a></li>
+                        <li><a href="">技术文章</a></li>
+                        <li><a href="">给我留言</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bj_top2">
+            <div class="zy_top">
+                <div class="bk_nrtop"></div>
+                <div class="bk_nr_center">
+                    <div class="container">
+                        <div>
+                            <form action="/login/forget" method="POST">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">注册邮箱:</label>
+                                    <input style="width: 85%;" name="uname" type="email" class="form-control" id="exampleInputEmail1"
+                                        placeholder="请输入注册邮箱">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">用户名</label>
+                                    <input style="width: 85%;"  name="bname" type="text" class="form-control" placeholder="请设置用户名">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">新密码:</label>
+                                    <input style="width: 85%;"  name="password" type="password" class="form-control" id="exampleInputPassword1"
+                                        placeholder="请输入新密码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">确认新密码:</label>
+                                    <input style="width: 85%;"  type="password" class="form-control" id="exampleInputPassword1"
+                                        placeholder="请再次输入新密码">
+                                </div>
+                                <button type="submit" class="btn btn-default">提交</button>
+                            </form>
+                        </div>
+                        <div style="height: 100px;"></div>
+                    </div>
+                </div>
+                <div class="bk_nrtop"></div>
+            </div>
+            <div class="bj_bottom">
+                <div class="bj_bottom1">All Rights Reserved 版权说有:<a href="">杨青个人博客</a> 备案号:蜀ICP背00000000号</div>
+                <div class="bj_bottom2">Design by dance Smile</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/add.js"></script>
+
+</html>

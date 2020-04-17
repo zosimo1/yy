@@ -1,0 +1,460 @@
+body,
+div,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    font-family: 华文楷体;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    border-bottom: 1px solid #ccc;
+}
+
+.nav .btn-default {
+    margin-top: 6px;
+}
+
+.abb {
+    padding: 20px;
+    background: url("../images/bg.jpg");
+}
+
+.abb1 {
+    background: url("../images/topbg.jpg");
+    height: 28px;
+    width: 100%;
+}
+
+.bj {
+    background: url("../images/bg.jpg");
+    width: 1350px;
+    margin: auto;
+}
+
+.bj_top {
+    background: url("../images/topbg.jpg");
+    width: 1350px;
+    height: 28px;
+    position: relative;
+    z-index: 90;
+}
+
+.bj_top1 {
+    background: url("../images/yuanshan.jpg") no-repeat 400px -65px;
+    width: 1350px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 90;
+}
+
+.bk_nr {
+    margin: auto;
+    width: 1000px;
+}
+
+.bt {
+    overflow: hidden;
+}
+
+.bj_top1 h1 {
+    font-size: 24px;
+    color: #333;
+    float: left;
+    margin: 50px 0px 0px 0px;
+    padding-left: 20px;
+}
+
+.an {
+    background: #333;
+    color: #fff;
+    float: right;
+    margin: 40px 0px 0px 0px;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.an a {
+    color: #fff;
+    margin-right: 10px;
+}
+
+.an_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+
+.an1 {
+    background: #333;
+    color: #fff;
+    float: right;
+    margin: 5px 0px 0px 5px;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.bt1 {
+    background: url("../images/navbg.png") no-repeat;
+    height: 80px;
+}
+
+.bt1 ul li a {
+    float: left;
+    font-size: 14px;
+    padding: 20px;
+    margin: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.bt1 ul li a:hover {
+    color: #FF0101;
+}
+
+.bt1 ul {
+    margin-left: 60px;
+}
+
+.bj_top2 {
+    background: url("../images/footside.jpg") no-repeat 50% 100%;
+    width: 1350px;
+    margin: auto;
+    position: relative;
+    z-index: 90;
+}
+
+.zy_top {
+    width: 1040px;
+    margin: auto;
+}
+
+.bk_nrtop {
+    background: url("../images/mainendbg.jpg") no-repeat;
+    height: 15px;
+}
+
+.bk_nr_center {
+    border: #D4D4D4 1px;
+    border-style: none solid;
+    width: 1000px;
+    margin: auto;
+    background: #ECECEC;
+}
+
+.nr_left {
+    float: left;
+    width: 600px;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+div {
+    overflow: hidden;
+}
+
+.nr_left p {
+    font-size: 16px;
+    line-height: 30px;
+    margin: 25px 5px;
+}
+
+.nr_left_images {
+    border: #fff 1px solid;
+    width: 142px;
+    height: 116px;
+    float: left;
+    margin: 0px 20px 10px 0px;
+}
+
+.nr_left_images img {
+    width: 142px;
+    height: 116px;
+}
+
+.a {
+    margin-right: 20px;
+}
+
+.nr_left i {
+    font-size: 14px;
+    font-style: normal;
+    color: #828384;
+}
+
+.nr_left_db {
+    position: relative;
+}
+
+.nr_left_h {
+    font-size: 18px;
+    color: #010101;
+}
+
+.nr_left_yd {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.nr_left_yd a {
+    background: #333333;
+    padding: 7px 5px;
+    color: white;
+    width: 85px;
+    display: block;
+    font-size: 14px;
+}
+
+.nr_left_yd a:hover,
+.nr_left_h:hover {
+    color: #FF0101;
+    text-decoration: none;
+}
+
+.nr_nl_pl {
+    background: #333333;
+    color: white;
+    padding: 3px 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.nr_ul ul {
+    position: relative;
+}
+
+.nr_ul li {
+    float: left;
+    color: #828384;
+    padding: 2px 10px;
+    font-size: 12px;
+}
+
+.nr_ul {
+    line-height: 20px;
+    background: url("../images/time.jpg") no-repeat white 2% 50%;
+    margin-right: 20px;
+    padding-left: 20px;
+    width: 100%
+}
+
+.nr_right {
+    float: right;
+    width: 330px;
+}
+
+.nr_right_bj {
+    background: url("../images/rtitbg.png") no-repeat 1% 60%;
+    width: 300px;
+    height: 80px;
+}
+
+.nr_right_bj p {
+    color: white;
+    padding: 30px 0px 0px 40px;
+}
+
+.lxfs ul li {
+    float: left;
+    padding: 6px;
+}
+
+.lxfs1 ul li a {
+    float: left;
+    margin: 0px 14px 0px 12px;
+    font-size: 12px;
+    color: #747F8C;
+}
+
+.twtj1,
+.twtj_nr li {
+    float: left;
+}
+
+.twtj_nr {
+    padding: 2px 0px 10px 15px;
+}
+
+.twtj_nr p {
+    font-size: 14px;
+}
+
+.twtj_nr_i {
+    background: url("../images/lanmbq.png") no-repeat;
+    margin: 20px 10px 0px 0px;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #9A9A9B;
+}
+
+.twtj_nr_j {
+    background: url("../images/datepng.png") no-repeat;
+    margin-top: 20px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #9A9A9B;
+}
+
+.nr_ph li {
+    font-size: 10px;
+    list-style: square;
+    margin: 15px;
+
+}
+
+.nr_ph a {
+    color: #333;
+}
+
+.nr_ph a:hover {
+    color: #FF0101;
+}
+
+.religh_images {
+    margin: 50px 0px 70px 0px;
+}
+
+.bj_bottom {
+    background: #5C5C5C;
+    width: 1350px;
+    height: 60px;
+    margin-top: 25px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.bj_bottom div {
+    font-size: 12px;
+    color: #E5E5E5;
+    margin: 20px 180px;
+}
+
+.bj_bottom1 {
+    float: left;
+
+}
+
+.bj_bottom1 a {
+    color: #010101;
+}
+
+.bj_bottom2 {
+    float: right;
+}
+
+.nr_left_left {
+    float: left;
+}
+
+.nr_left_left img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.nr_blogname {
+    color: #010101;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nr_left_right {
+    padding: 10px 20px;
+}
+
+.nr_blogget {
+    font-size: 12px;
+    color: #FF0101;
+}
+
+.nr_db_imgg {
+    display: block;
+    margin: 10px auto;
+    width: 300px;
+
+}
+
+.redname {
+    color: rgb(0, 233, 0);
+    font-size: 18px;
+}
+
+.bolg_time {
+    float: right;
+}
+
+.bolg_comment {
+    border-bottom: 1px #ccc solid;
+}
+
+.Conmment {
+    background: url(../images/bg.jpg);
+    padding: 10px 0px;
+}
+
+.reqly {
+    margin: 5px 0px 5px 60px;
+}
+
+.title {
+    width:350px;
+    word-break:break-all;
+    display:-webkit-box;/**对象作为伸缩盒子模型展示**/
+    -webkit-box-orient:vertical;/**设置或检索伸缩盒子对象的子元素的排列方式**/
+    -webkit-line-clamp:3;/**显示的行数**/
+    overflow:hidden;/**隐藏超出的内容**/
+}
+.title1 {
+    width:200px;
+    word-break:break-all;
+    display:-webkit-box;/**对象作为伸缩盒子模型展示**/
+    -webkit-box-orient:vertical;/**设置或检索伸缩盒子对象的子元素的排列方式**/
+    -webkit-line-clamp:1;/**显示的行数**/
+    overflow:hidden;/**隐藏超出的内容**/
+}
+.media-object_img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display:inline-block;
+}
+
+.media-object_img1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display:inline-block;
+}
+.glyphicon-plus{
+    color: #010101;
+    font-size: 18px;
+    transform: rotate(45deg);
+    
+}
+.glyphicon-plus:hover{
+    text-decoration: none;
+}
+.pagination1>li>a, .pagination1>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #000;
+    text-decoration: none;
+}

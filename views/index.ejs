@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./css/grbk.css" />
+</head>
+
+<body>
+    <!-- 登录界面 -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content ">
+                <div class="abb1"> </div>
+                <form action="/login/enter" method="post" class="abb">
+                    <div class="app"><img src="./images/logo.png" width="50px"> <span style="font-size: 14px;">
+                            <i style="font-size: 20px; padding: 10px;">·</i>用户名密码登录</span></div>
+                    <div class="form-group">
+                        <input id="tt" name="tt" type="hidden">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名"
+                            name="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码"
+                            name="password">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                    </div>
+                    <div>
+                        <a href="/forget" style="font-size: 14px;">忘记密码?</a>
+                        <a href="/reg" style="font-size: 14px; float: right;">立刻注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="bj">
+            <div class="bj_top"> </div>
+            <div class="bj_top1">
+                <div class="bk_nr">
+                    <div class="bt">
+                        <h1>古典系列个人博客——江南墨卷</h1>
+                        <a onclick="htmles()" class="an" data-toggle="modal" data-target=".bs-example-modal-sm">登录</a>
+                        <a class="an" href="/reg">注册</a>
+                    </div>
+                    <div class="bt1">
+                        <ul>
+                            <li><a href="/">网站首页</a></li>
+                            <li><a href="/text">发博文</a></li>
+                            <li><a href="">技术文章</a></li>
+                            <li><a href="">给我留言</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bj_top2">
+                <div class="zy_top">
+                    <div class="bk_nrtop"></div>
+                    <div class="bk_nr_center">
+                        <div class="container">
+                            <div>
+                                <form id='td' action="/login" method="POST" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><span style="color: red;"> *</span>
+                                            注册邮箱:</label>
+                                        <input style="width: 85%;" name="uname" type="text" class="form-control"
+                                            id="txtemail" placeholder="请输入注册邮箱" onblur="Email()" required="required">
+                                        <span id="span_email" style="color: red;"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><span style="color: red;"> *</span> 用户名</label>
+                                        <input style="width: 85%;" name="bname" type="text" class="form-control"
+                                            placeholder="请设置用户名" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1"><span style="color: red;"> *</span>
+                                            密码:</label>
+                                        <input style="width: 85%;" name="password" type="password" class="form-control"
+                                            required="required" id="txtpwd" placeholder="请输入8-16位位字母加数字组合的密码(至少要有2个字母)"
+                                            onblur="Password()">
+                                        <span id="span_pwd" style="color: red;"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1"><span style="color: red;"> *</span> 确认密码 :
+                                        </label>
+                                        <input style="width: 85%;" type="password" class="form-control" id="txtpwd2"
+                                            placeholder="请再次输入密码" onblur="Password2()" required="required">
+                                        <span id="span_pwd2" style="color: red;"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">头像</label>
+                                        <input name="img" type="file" id="exampleInputFile">
+                                    </div>
+                                    <input id="val1" type="text" value="" placeholder="请输入验证码（不区分大小写）"
+                                        style="width: 200px;height: 35px;border: 1px solid #ddd;box-sizing: border-box;">
+                                    <canvas id="myCanvas" width="120" height="35"
+                                        style="vertical-align: middle;box-sizing: border-box;border: 1px solid #ddd;cursor: pointer;"></canvas>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> 阅读并接受<a href="#">《博客用户协议》</a>
+                                        </label>
+                                    </div>
+                                    <input id="butto" type="button" value="提交">
+                                </form>
+                            </div>
+                            <div style="height: 100px;"></div>
+                        </div>
+                    </div>
+                    <div class="bk_nrtop"></div>
+                </div>
+                <div class="bj_bottom">
+                    <div class="bj_bottom1">All Rights Reserved 版权说有:<a href="">杨青个人博客</a> 备案号:蜀ICP背00000000号</div>
+                    <div class="bj_bottom2">Design by dance Smile</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/add.js"></script>
+<script>
+    function randomNum(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+    //拿一个随机的颜色
+    function randomColor(min, max) {
+        var r = randomNum(min, max);
+        var g = randomNum(min, max);
+        var b = randomNum(min, max);
+        return "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+
+
+    function randomCanvas() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var width = c.width;
+        var height = c.height;
+        ctx.textBaseline = 'bottom';
+        ctx.fillStyle = randomColor(150, 240);
+        ctx.fillRect(0, 0, width, height)
+        //生成一个随机的验证码
+        var str = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghizklmnpqrstuvwxyz123456789';
+        var u = [];
+        for (var i = 0; i < 4; i++) {
+            var tex = str[randomNum(0, str.length)] //拿到一个4位数的随机数
+            u += tex.toLowerCase()
+            ctx.fillStyle = randomColor(0, 160) //颜色
+            ctx.font = randomNum(14, 28) + 'px 微软雅黑' //字体大小
+            var x = 10 + i * 25;
+            var y = randomNum(20, 38);
+            var z = randomNum(-45, 45);
+            ctx.translate(x, y); //位置
+            ctx.rotate(z * Math.PI / 180); //角度
+            ctx.fillText(tex, 0, 0);
+            //返回位置和角度;
+            ctx.rotate(-z * Math.PI / 180);
+            ctx.translate(-x, -y);
+        }
+        document.getElementById("butto").onclick = function () {
+            var val = document.getElementById("val1").value.toLowerCase();
+            if (val !== u) {
+                alert('验证码错误！请重新输入！');
+                document.getElementById("val").value("");
+            } else {
+                document.getElementById("td").submit();
+                document.getElementById("val").value("");
+            }
+        }
+        //随机的直线
+        for (var i = 0; i < 5; i++) {
+            ctx.strokeStyle = randomColor(40, 180); //颜色
+            ctx.beginPath();
+            ctx.moveTo(randomNum(0, width), randomNum(0, height)); //起点坐标
+            ctx.lineTo(randomNum(0, width), randomNum(0, height)); //终点坐标
+            ctx.stroke();
+        }
+        //随机点
+        for (var i = 0; i < 50; i++) {
+            ctx.fillStyle = randomColor(0, 255); //颜色
+            ctx.beginPath();
+            ctx.arc(randomNum(0, width), randomNum(0, height), 1, 0, 2 * Math.PI); //画一个半径为1的圆
+            ctx.fill();
+        }
+    }
+    randomCanvas()
+
+    //画布要生成的数字
+    document.getElementById("myCanvas").onclick = function (e) {
+        randomCanvas();
+    }
+
+
+    function Password() {
+        //密码
+        var pwd = document.getElementById("txtpwd").value;
+        var reg = /^.*(?=.{8,16})(?=.*\d)(?=.*[A-z]{2,})(?=.*[!@#\$%\^&\*\?\(\),\.;:'"<>\{\}\[\]\\/\+-=\|_]).*$/
+        if (!reg.test(pwd)) {
+            span_pwd.innerHTML = "请输入8-16位位字母加数字组合的密码(至少要有2个字母)";
+        } else {
+            span_pwd.innerHTML = "";
+        }
+    }
+
+    function Password2() {
+        //确认密码
+        var pwd = document.getElementById("txtpwd").value;
+        var pwd2 = document.getElementById("txtpwd2").value;
+        if (pwd != pwd2) {
+            span_pwd2.innerHTML = "两次输入不一致";
+        } else {
+            span_pwd2.innerHTML = "";
+        }
+    }
+
+    function Email() {
+        //邮箱验证
+        var email = document.getElementById("txtemail").value;
+        var reg1 = /^[\w\d]{1,9}@[\w\d]{1,9}\.[\w]{2,3}$/;
+        if (!reg1.test(email)) {
+            span_email.innerHTML = "错误!如:jack@163.com";
+        } else {
+            span_email.innerHTML = "";
+        }
+    }
+</script>
+
+</html>

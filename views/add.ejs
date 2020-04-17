@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人博客</title>
+    <link type="text/css" rel="stylesheet" href="./css/grbk.css" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 登录界面 -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content ">
+                <div class="abb1"> </div>
+                <form action="/login/enter" method="post" class="abb">
+                    <div class="app"><img src="./images/logo.png" width="50px"> <span style="font-size: 14px;">
+                            <i style="font-size: 20px; padding: 10px;">·</i>用户名密码登录</span></div>
+                    <div class="form-group">
+                        <input id="tt" name="tt" type="hidden">
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入用户名"
+                            name="name">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码"
+                            name="password">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                    </div>
+                    <div>
+                        <a href="/forget" style="font-size: 14px;">忘记密码?</a>
+                        <a href="/reg" style="font-size: 14px; float: right;">立刻注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="bj">
+            <div class="bj_top"> </div>
+            <div class="bj_top1">
+                <div class="bk_nr">
+                    <div class="bt">
+                        <h1>古典系列个人博客——江南墨卷</h1>
+                        <% if(user){ %>
+                        <div class="an">
+                            <a href="#"><img class="an_img" src="./textimages/<%= user.img %>"></a>
+                            <a style="line-height: 32px;" href="#"><%= user.name %></a>
+                            <a class="an1" href="/reb">登出</a>
+                        </div>
+                        <% } else{ %>
+                        <a onclick="htmles()" class="an" data-toggle="modal" data-target=".bs-example-modal-sm">登录</a>
+                        <a class="an" href="/reg">注册</a>
+                        <% } %>
+                    </div>
+                    <div class="bt1">
+                        <ul>
+                            <li><a href="/">网站首页</a></li>
+                            <% if(user){ %>
+                            <li><a href="/myComment">我的评论</a></li>
+                            <li><a href="/comment">我的博文</a></li>
+                            <% } %>
+                            <li><a href="/text">发博文</a></li>
+                            <li><a href="">技术文章</a></li>
+                            <li><a href="">给我留言</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bj_top2">
+                <div class="zy_top">
+                    <div class="bk_nrtop"></div>
+                    <div class="bk_nr_center">
+                        <div class="nr_left">
+                            <div>
+                                <div class="nr_left_left">
+                                    <img src="./textimages/<%= cb.blogImg %>">
+                                </div>
+                                <div class="nr_left_right">
+                                    <div>
+                                        <a class="nr_blogname" href="/add?id=<%= cb._id %>"><%= cb.blogName %></a>
+                                        <span>发布于:<%= cb.times %></span>
+                                    </div>
+                                    <span><a href="#" class="nr_left_h"><%= cb.title %></a></span>
+                                    <div class="nr_blogget">个人博客：[<a href="">心得笔记</a>]</div>
+                                    <div class="nr_left_db">
+                                        <div class="a">
+                                            <div><i><%= cb.text %></i></div>
+                                            <img class="nr_db_imgg" src="./textimages/<%= cb.img %>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <form>
+                                        <input id="autuor" name="blongName" type="hidden" value="<%= cb._id %>">
+                                        <input id="blongName" name="blongName" type="hidden"
+                                            value="<%= cb.author._id %>">
+                                        <textarea id="commentes" class="form-control" rows="1" style="resize:none"
+                                            name="comment"></textarea>
+                                        <button id="btn1" type="button" class="btn btn-default btn-xs"
+                                            style="float: right;" onclick="db('<%= cb._id %>')">评论</button>
+                                    </form>
+                                </div>
+                                <div class="Conmment">
+                                    <% for(var i=us.length-1;i>=0 ;i--){ %>
+                                    <div class="bolg_comment">
+                                        <div style="width: 60px; float: left;">
+                                            <img width="50px" style="display:inline;" class="media-object "
+                                                src="./textimages/<%= cb.img %>">
+                                        </div>
+                                        <div style="font-size: 18px;">
+                                            <span
+                                                class="redname"><%= cb.blogName %></span><span>:<%= us[i].comment %></span>
+                                            <div style="font-size: 14px; margin: 5px;">
+                                                <span><%= us[i].times %></span>
+                                                <span class="bolg_time">回复|点赞</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nr_right">
+                            <div class="nr_right_bj">
+                                <p>关注我</p>
+                            </div>
+                            <div class="lxfs">
+                                <ul>
+                                    <li><img src="./images/gz04.jpg"></li>
+                                    <li><img src="./images/gz03.jpg"></li>
+                                    <li><img src="./images/gz02.jpg"></li>
+                                    <li><img src="./images/gz01.jpg"></li>
+                                </ul>
+                            </div>
+                            <div class="lxfs1">
+                                <ul>
+                                    <li><a href="">我的电话</a></li>
+                                    <li><a href="">我的邮箱</a></li>
+                                    <li><a href="">我的QQ</a></li>
+                                    <li><a href="">个人奖项</a></li>
+                                </ul>
+                            </div>
+                            <div class="nr_right_bj">
+                                <p>图文推荐</p>
+                            </div>
+                            <% for(var i=0; i<cb.length; i++){ %>
+                                    <div class="twtj">
+                                        <div class="twtj1"><img src="./textimages/<%= cb[i].img %>" width="72"
+                                                height="60">
+                                        </div>
+                                        <div class="twtj_nr">
+                                            <div>
+                                                <p><%= cb[i].title %></p>
+                                            </div>
+                                            <div>
+                                                <ul>
+                                                    <li class="twtj_nr_i">手机配件</li>
+                                                    <li class="twtj_nr_j"><%= cb[i].times %></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <% } %>
+                                    <div class="nr_right_bj">
+                                        <p>点击排行荐</p>
+                                    </div>
+                                    <div class="nr_ph">
+                                        <ul>
+                                            <% for(var i=cb.length-1;i>=0 ;i--){ %>
+                                            <li><a href=""><%= cb[i].title %></a></li>
+                                            <% } %>
+                                        </ul>
+                                    </div>
+                                    <div class="religh_images"><img src="./images/03.jpg"></div>
+                                </div>
+                            </div>
+                            <div class="bk_nrtop"></div>
+                        </div>
+                        <div class="bj_bottom">
+                            <div class="bj_bottom1">All Rights Reserved 版权说有:<a href="">杨青个人博客</a> 备案号:蜀ICP背00000000号
+                            </div>
+                            <div class="bj_bottom2">Design by dance Smile</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+<script src="./js/jquery.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/add.js"></script>
+
+</html>

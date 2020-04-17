@@ -1,0 +1,151 @@
+body,div,ul,li,p{
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.bj{
+    background: url("../images/bg.jpg");
+    width: 1350px;
+    margin: auto;
+}
+.bj_top{
+    background: url("../images/topbg.jpg");
+    width: 1350px;
+    height: 28px;
+}
+.bj_top1{
+    background: url("../images/yuanshan.jpg") no-repeat 400px -65px;
+    width: 1350px;
+    margin: auto;
+    overflow: hidden;
+}
+.bk_nr{
+    margin: auto;
+    width: 1000px;
+}
+.bt{
+    overflow: hidden;
+}
+.bj_top1 h1{
+    font-size: 24px;
+    color: #333;
+    float: left;
+    margin: 50px 0px 0px 0px;
+    padding-left:20px;
+}
+.an{
+    background: #333;
+    color: #fff;
+    float: right;
+    margin: 50px 0px 0px 0px;
+    padding: 5px 10px;
+    border:1px solid;
+    border-radius:8px;
+}
+.an1{
+    color: #999999;
+    float: right;
+    margin: 53px 10px 30px 0px;
+    line-height: 25px;
+    background: #E5E5E5;
+    border: 1px #CCCCCC solid;
+}
+.bt1{
+    background: url("../images/navbg.png") no-repeat;
+    height: 60px;
+}
+.bt1 ul li a{
+    float: left;
+    font-size: 14px;
+    padding: 20px;
+    margin: 5px;
+    font-weight: bold;
+    color: white;
+}
+.bt1 ul li a:hover{
+    color: #FF0101;
+}
+.bt1 ul{
+    margin-left: 60px;
+}
+.bj_top2{
+    background: url("../images/footside.jpg") no-repeat 50% 95%;
+    width: 1350px;
+    margin: 20px auto;
+}
+.zy_top{
+    border: #D4D4D4 1px  solid;
+    width: 950px;
+    margin: auto;
+}
+.bk_nr_center{
+    width: 900px;
+    margin: auto;    
+}
+.center_xhx{
+    border-bottom: black 2px solid;
+    overflow: hidden;
+    padding: 30px 0px 5px 5px;
+}
+.center_left{
+    float: left;
+    font-size: 16px;
+    color: #82100D;
+}
+.center_right{
+    float: right;
+    font-size: 12px;
+}
+.center_right,.center_right a{
+    color: #646464;
+}
+.grjj_nr{
+    width: 880px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.grjj_nr h1{
+    font-size: 24px;
+    text-align: center;
+    color: #8F501A;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.grjj_nr p{
+    font-size: 14px;
+    text-indent: 2em;
+    color: #646464;
+    line-height: 22px;
+}
+.img{
+    width: 870px;
+    padding: 20px 300px
+}
+.bj_bottom{
+    background:#5C5C5C;
+    width: 1350px;
+    height: 60px;
+    margin-top:25px;
+    opacity:0.6;
+    filter:alpha(opacity=60); 
+}
+.bj_bottom div{
+    font-size: 12px;
+    color: #E5E5E5;
+    margin: 20px 180px;
+}
+.bj_bottom1{
+    float: left;
+    
+}
+.bj_bottom1 a{
+    color: #010101;
+}
+.bj_bottom2{
+    float: right;
+}
